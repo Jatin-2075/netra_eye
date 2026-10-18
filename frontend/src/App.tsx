@@ -2,7 +2,6 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import GazeGauge from "./components/GazeGauge";
 import EyeTest from "./components/EyeTest";
 import CalibrationScreen from "./components/CalibrationScreen";
-import Intro from "./components/Intro";
 import RoomPanel from "./components/RoomPanel";
 import type { DeviceId } from "./components/RoomPanel";
 import MessageCard from "./components/MessageCard";
@@ -58,7 +57,6 @@ export default function App() {
   const { reading } = tracker;
 
   const [phase, setPhase] = useState<Phase>("calibrate");
-  const [showIntro, setShowIntro] = useState(!testMode && import.meta.env.MODE !== "test");
   const [calibration, setCalibration] = useState<CalibrationData | null>(null);
   const [lang, setLang] = useState<Lang>("en");
   const [screen, setScreen] = useState<Screen>("menu");
@@ -490,10 +488,6 @@ export default function App() {
         />
       </div>
     );
-  }
-
-  if (showIntro) {
-    return <Intro lang={lang} onDone={() => setShowIntro(false)} />;
   }
 
   const finishCalibration = (data: CalibrationData) => {
