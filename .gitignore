@@ -1,0 +1,43 @@
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+backend/.env
+frontend/.env
+frontend/.env.local
+backend/**/.env
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyd
+venv/
+.venv/
+.pytest_cache/
+.mypy_cache/
+
+# Frontend / Node
+node_modules/
+frontend/node_modules/
+frontend/dist/
+dist/
+
+# IDE and OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+
+# Test coverage
+coverage/
+htmlcov/
+
+# SQLite databases
+*.db
+*.sqlite
+*.sqlite3
