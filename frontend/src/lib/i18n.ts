@@ -19,6 +19,7 @@ export const nextLang = (lang: Lang): Lang => (lang === 'en' ? 'hi' : 'en');
 const en = {
     appName: 'Netra Voice',
     tagline: 'Speak and control your room with your eyes',
+    begin: 'Begin',
 
     menuPhrases: 'Quick phrases',
     menuReplies: 'Replies',
@@ -81,6 +82,7 @@ export type StringKey = keyof typeof en;
 const hi: Record<StringKey, string> = {
     appName: 'नेत्र वॉइस',
     tagline: 'अपनी आँखों से बोलिए और कमरा नियंत्रित कीजिए',
+    begin: 'शुरू करें',
 
     menuPhrases: 'त्वरित वाक्य',
     menuReplies: 'उत्तर',
